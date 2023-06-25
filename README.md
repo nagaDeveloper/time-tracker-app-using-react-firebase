@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Time Tracker Application (Live on udemy)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The Time Tracker application is a robust project management tool built with React and Firebase. This application helps in tracking the time you spend on various tasks, thereby improving your productivity and time management. It provides an interactive interface where you can easily create, update, fetch, and delete tasks. In addition, the application offers a comprehensive breakdown of the total time spent on tasks in weeks, months, and in total.
 
-## Available Scripts
+## Key Features
+1. **User Authentication:** Register new users and login for existing users, leveraging Firebase authentication.
+2. **Task Management:** Create, fetch, update, and delete tasks with real-time data sync using Firebase Firestore.
+3. **Time Reporting:** Get comprehensive reports on the total time spent on tasks over different periods (weekly, monthly, and overall).
 
-In the project directory, you can run:
+## Pre-requisites
+- Node.js (Version 12.0 or higher)
+- Firebase account
 
-### `npm start`
+## Installation and Setup
+Follow these steps to get the application up and running on your local machine:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone this repository to your local machine.
+```
+git clone https://github.com/[Your_GitHub_Username]/time-tracker-application.git
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project folder and install the required dependencies.
+```
+cd time-tracker-application
+npm install
+```
 
-### `npm test`
+3. Create a Firebase project and enable email/password authentication:
+   - Go to the Firebase [console](https://console.firebase.google.com/) and create a new project.
+   - Navigate to the 'Authentication' section and enable 'Email/Password' authentication.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Create a Firestore database:
+   - Navigate to the 'Database' section and create a Firestore database.
+   - Start the database in test mode.
 
-### `npm run build`
+5. Now, you'll need to add your Firebase configuration to the application:
+   - Go to the 'Project Settings' and copy your configuration details.
+   - In the project folder, create a `.env` file at the root level.
+   - Paste your configuration details in the `.env` file as follows:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+REACT_APP_API_KEY = "your API key"
+REACT_APP_AUTH_DOMAIN = "your auth domain"
+REACT_APP_PROJECT_ID = "your project ID"
+REACT_APP_STORAGE_BUCKET = "your storage bucket"
+REACT_APP_MESSAGING_SENDER_ID = "your messaging sender ID"
+REACT_APP_APP_ID = "your app ID"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. Start the development server:
+```
+npm start
+```
+The application will start running at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+Register for an account or login if you already have one. You can then proceed to create, fetch, update, and delete tasks. The application will automatically calculate and display the total time you have spent on tasks, segmented by weeks, months, and the total overall time.
 
-### `npm run eject`
+## Contributing
+We welcome contributions from everyone. Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+This project is licensed under the terms of the MIT license. For more information, see [LICENSE.md](LICENSE.md).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
+For any inquiries, please open an issue in this repository.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We hope you find this application useful in managing your tasks and tracking your time efficiently!
